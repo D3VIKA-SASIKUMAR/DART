@@ -229,4 +229,41 @@ void main() {
     income = (income * 30) / 100;
     print("income tax amount = $income");
   }
+
+   // Ask the user for a string and print out whether this string is a palindrome or not
+
+  print("enter a string:");
+  String str = stdin.readLineSync()!;
+  String check = str.split('').reversed.join();
+  bool isPalindrome = str == check;
+
+  if (str == check) {
+    print('$str is palindrome');
+  } else {
+    print('$str is not palindrome');
+  }
+
+
+  // Ask the user for a number and determine whether the number is prime or not.
+
+  int isPrime = 1;
+  print("enter a number:");
+  int number = int.parse(stdin.readLineSync()!);
+  if (number <= 1) {
+    isPrime = 0;
+  } else if (number % 2 == 0 && number != 2) {
+    isPrime = 0;
+  } else if (number % 3 == 0 && number != 3) {
+    isPrime = 0;
+  } else if (number % 5 == 0 && number != 5) {
+    isPrime = 0;
+  } else if (number % 7 == 0 && number != 7) {
+    isPrime = 0;
+  }
+
+  if (isPrime == 1) {
+    print("is a prime numberber");
+  } else {
+    print("is not prime");
+  }
 }
