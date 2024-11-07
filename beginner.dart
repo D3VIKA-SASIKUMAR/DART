@@ -187,4 +187,46 @@ void main() {
     }
     print("");
   }
+
+  //  Income tax is calculated as per the following table
+
+// Annual Income
+// Tax percentage
+// Up to 2.5 Lakhs
+// No Tax
+// Above 2.5 Lakhs to 5 Lakhs
+// 5%
+// Above 5 Lakhs to 10 Lakhs
+// 20%
+// Above 10 Lakhs to 50 Lakhs
+// 30%
+
+// Write a program to find out the income tax amount of a person.
+// Program should accept annual income of a person
+// Output the amount of tax he has to pay
+
+// Eg 1:
+// Enter the annual income
+// 495000
+// Income tax amount = 24750.00
+
+// Eg 2:
+// Enter the annual income
+// 500000
+// Income tax amount = 25000.00
+
+  print("enter the annual income:");
+  num income = num.parse(stdin.readLineSync()!);
+  if (income <= 250000) {
+    print("no tax");
+  } else if (income > 25000 && income <= 500000) {
+    income = (income * 5) / 100;
+    print("income tax amount = $income");
+  } else if (income > 500000 && income <= 1000000) {
+    income = (income * 20) / 100;
+    print("income tax amount = $income");
+  } else if (income > 1000000 && income <= 5000000) {
+    income = (income * 30) / 100;
+    print("income tax amount = $income");
+  }
 }
